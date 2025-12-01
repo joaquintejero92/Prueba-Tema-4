@@ -1,48 +1,48 @@
 {
-  "alumnos": [
+  "autores": [
     {
       "id": "1",
       "nombre": "José",
       "localidad": "Montilla",
-      "fecha_nacimiento": "2000-01-01",
+      "premioNobel": "No",
       "createdAt": "2024-10-23T10:56:35.101Z"
     },
     {
       "id": "2",
       "nombre": "Juan",
       "localidad": "Lucena",
-      "fecha_nacimiento": "2000-01-01",
+      "premioNobel": "Yes",
       "createdAt": "2025-11-06T12:22:34.096Z"
     },
     {
       "id": "3",
       "nombre": "Ana",
       "localidad": "Aguilar",
-      "fecha_nacimiento": "2000-01-01",
+      "premioNobel": "No",
       "createdAt": "2025-11-06T12:50:07.914Z"
     }
   ],
-  "profesores": [
+  "libros": [
     {
       "id": "1",
-      "nombre": "José Profe",
-      "especialidad": "Matemáticas",
-      "estado_civil": "Casado",
+      "titulo": "José Profe",
+      "editorial": "Matemáticas",
+      "fecha": "Casado",
       "createdAt": "2024-10-23T10:56:35.101Z"
     },
     {
-      "nombre": "Juan Profe",
-      "especialidad": "Matemáticas",
-      "estado_civil": "Soltero",
-      "createdAt": "2025-11-06T12:22:34.096Z",
-      "id": "2"
+      "id": "2",
+      "titulo": "José Profe",
+      "editorial": "Matemáticas",
+      "fecha": "Casado",
+      "createdAt": "2024-10-23T10:56:35.101Z"
     },
     {
       "id": "3",
-      "nombre": "Ana Profe",
-      "especialidad": "Lengua",
-      "estado_civil": "Casado",
-      "createdAt": "2025-11-06T12:50:07.914Z"
+      "titulo": "José Profe",
+      "editorial": "Matemáticas",
+      "fecha": "Casado",
+      "createdAt": "2024-10-23T10:56:35.101Z"
     }
   ]
 }

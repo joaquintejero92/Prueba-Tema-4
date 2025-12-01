@@ -1,23 +1,23 @@
 'use client'
-import { editarAlumnoDB } from "@/lib/actions";
+import { editarAutorDB } from "@/lib/actions";
 import { useState } from "react";
 
 
-function AlumnoEditarDB({ alumno }) {
+function AutorEditarDB({ autor }) {
     const [visible, setVisible] = useState(false)
 
     return (
         <>
             {visible &&
                 <form className='my-10 grid grid-cols-[150px_auto] gap-4'>
-                    <input type="hidden" name='id' defaultValue={alumno.id} />
+                    <input type="hidden" name='id' defaultValue={autor.id} />
 
                     <label htmlFor='nombre'>Nombre</label>
                     <input
                         required
                         id='nombre'
                         name='nombre'
-                        defaultValue={alumno.nombre}
+                        defaultValue={autor.nombre}
                         className='p-1 border border-slate-200 focus:outline-blue-300 text-lg'
                     />
 
@@ -26,23 +26,22 @@ function AlumnoEditarDB({ alumno }) {
                         required
                         id='localidad'
                         name='localidad'
-                        defaultValue={alumno.localidad}
+                        defaultValue={autor.localidad}
                         className='p-1 border border-slate-200 focus:outline-blue-300 text-lg'
                     />
 
-                    <label htmlFor='fecha_nacimiento'>Fecha de nacimiento</label>
+                    <label htmlFor='premioNobel'>Premio Nobel</label>
                     <input
-                        required
-                        id='fecha_nacimiento'
-                        name='fecha_nacimiento'
-                        type='date'
-                        defaultValue={alumno.fecha_nacimiento}
-                        className='p-1 border border-slate-200 focus:outline-blue-300 text-lg'
+                        id='premioNobel'
+                        name='premioNobel'
+                        type='checkbox'
+                        defaultChecked={autor.premioNobel === true}
+                        className='w-5 h-5'
                     />
 
                     <div className='col-span-2 grid gap-2'>
-                        <button formAction={editarAlumnoDB} className='bg-green-600 text-white px-4 py-2 rounded-xl'>
-                            Actualizar alumno
+                        <button formAction={editarAutorDB} className='bg-green-600 text-white px-4 py-2 rounded-xl'>
+                            Actualizar autor
                         </button>
                     </div>
                 </form>
@@ -54,4 +53,4 @@ function AlumnoEditarDB({ alumno }) {
     );
 }
 
-export default AlumnoEditarDB;
+export default AutorEditarDB;

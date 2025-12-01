@@ -1,33 +1,33 @@
 import Link from 'next/link'
 import Buscar from '@/components/buscar'
-import { eliminarProfesorDB } from '@/lib/actions'
-import { obtenerProfesoresDB } from '@/lib/data'
-import ProfesorEditarDB from './db-profesor-editar'
+import { eliminarLibroDB } from '@/lib/actions'
+import { obtenerLibrosDB } from '@/lib/data'
+import LibroEditarDB from './db-libro-editar'
 
 
 
-async function Profesores({ query }) {
+async function Libros({ query }) {
 
-    const profesores = await obtenerProfesoresDB(query)
+    const libros = await obtenerLibrosDB(query)
 
     return (
         <>
             <h1 className='text-2xl text-slate-600 py-2  mb-2 border-b-2 border-b-slate-600'>
-                Listado de profesores
+                Listado de libros
             </h1>
 
             <Buscar />
 
             <div className='flex flex-col'>
-                {profesores.sort((a, b) => a.createdAt - b.createdAt).reverse()  // Orden inverso de tiempo   
-                    .map((profesor) => (
-                        <div key={profesor.id} className='p-2 odd:bg-slate-100 flex justify-between'>
-                            <Link href={`/profesores-db/${profesor.id}`}>{profesor.nombre}</Link>
+                {libros.sort((a, b) => a.createdAt - b.createdAt).reverse()  // Orden inverso de tiempo   
+                    .map((libro) => (
+                        <div key={libro.id} className='p-2 odd:bg-slate-100 flex justify-between'>
+                            <Link href={`/libros-db/${libro.id}`}>{libro.nombre}</Link>
                             <div className='flex gap-6'>
-                                <ProfesorEditarDB profesor={profesor} />
+                                <LibroEditarDB libro={libro} />
                                 <form>
-                                    <input type="hidden" name='id' value={profesor.id} />
-                                    <button formAction={eliminarProfesorDB} title='ELIMINAR'>🗑️</button>
+                                    <input type="hidden" name='id' value={libro.id} />
+                                    <button formAction={eliminarLibroDB} title='ELIMINAR'>🗑️</button>
                                 </form>
                             </div>
                         </div>
@@ -39,7 +39,7 @@ async function Profesores({ query }) {
     )
 }
 
-export default Profesores
+export default Libros
 
 
 

@@ -9,20 +9,20 @@ const menu = [
         href: '/'
     },
     {
-        text: 'Alumnos DB',
-        href: '/alumnos-db'
+        text: 'Autores DB',
+        href: '/autores-db'
     },
     {
-        text: 'Profesores DB',
-        href: '/profesores-db'
+        text: 'Libros DB',
+        href: '/libros-db'
     },
     {
-        text: 'Alumnos API',
-        href: '/alumnos-api'
+        text: 'Autores API',
+        href: '/autores-api'
     },
     {
-        text: 'Profesores API',
-        href: '/profesores-api'
+        text: 'Libros API',
+        href: '/libros-api'
     }
 ]
 

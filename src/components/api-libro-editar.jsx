@@ -30,18 +30,19 @@ function LibroEditarAPI({ libro }) {
                         className='p-1 border border-slate-200 focus:outline-blue-300 text-lg'
                     />
 
-                    <label htmlFor='fecha'>fecha publicacion</label>
+                    <label htmlFor='fecha'>Fecha de publicacion</label>
                     <input
                         required
                         id='fecha'
                         name='fecha'
+                        type='date'
                         defaultValue={libro.fecha}
                         className='p-1 border border-slate-200 focus:outline-blue-300 text-lg'
                     />
 
                     <div className='col-span-2 grid gap-2'>
-                        <button formAction={editarProfesorAPI} className='bg-green-600 text-white px-4 py-2 rounded-xl'>
-                            Actualizar profesor
+                        <button formAction={editarLibroAPI} className='bg-green-600 text-white px-4 py-2 rounded-xl'>
+                            Actualizar libro
                         </button>
                     </div>
                 </form>
@@ -53,4 +54,4 @@ function LibroEditarAPI({ libro }) {
     );
 }
 
-export default ProfesorEditarAPI;
+export default LibroEditarAPI;
