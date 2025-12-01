@@ -63,7 +63,7 @@ export async function obtenerLibroDB(id) {
 
 
 export async function obtenerAutoresAPI(query) {
-    const response = await fetch('http://localhost:3000/autores-api')
+    const response = await fetch('http://localhost:3000/autores/')
     const autores = await response.json()
 
     // Introducimos un retardo artificial
@@ -75,7 +75,7 @@ export async function obtenerAutoresAPI(query) {
 
 
 export async function obtenerAutorAPI(id) {
-    const response = await fetch('http://localhost:3000/autores-api' + id)
+    const response = await fetch('http://localhost:3000/autores/' + id)
     if (!response.ok) return null
     const autor = await response.json()
 
@@ -88,7 +88,7 @@ export async function obtenerAutorAPI(id) {
 
 
 export async function obtenerLibrosAPI(query) {
-    const response = await fetch('http://localhost:3000/libros')
+    const response = await fetch('http://localhost:3000/libros/')
     const libros = await response.json()
 
     // Introducimos un retardo artificial

@@ -12,7 +12,7 @@ function LibroEditarAPI({ libro }) {
                 <form className='my-10 grid grid-cols-[150px_auto] gap-4'>
                     <input type="hidden" name='id' defaultValue={libro.id} />
 
-                    <label htmlFor='nombre'>Nombre</label>
+                    <label htmlFor='titulo'>Titulo</label>
                     <input
                         required
                         id='titulo'

@@ -22,7 +22,7 @@ async function Libros({ query }) {
                 {libros.sort((a, b) => a.createdAt - b.createdAt).reverse()  // Orden inverso de tiempo   
                     .map((libro) => (
                         <div key={libro.id} className='p-2 odd:bg-slate-100 flex justify-between'>
-                            <Link href={`/libros-db/${libro.id}`}>{libro.nombre}</Link>
+                            <Link href={`/libros-db/${libro.id}`}>{libro.titulo}</Link>
                             <div className='flex gap-6'>
                                 <LibroEditarDB libro={libro} />
                                 <form>
