@@ -4,21 +4,21 @@
       "id": "1",
       "nombre": "José",
       "localidad": "Montilla",
-      "premioNobel": "No",
+      "premioNobel": "1",
       "createdAt": "2024-10-23T10:56:35.101Z"
     },
     {
       "id": "2",
       "nombre": "Juan",
       "localidad": "Lucena",
-      "premioNobel": "Yes",
+      "premioNobel": "0",
       "createdAt": "2025-11-06T12:22:34.096Z"
     },
     {
       "id": "3",
       "nombre": "Ana",
       "localidad": "Aguilar",
-      "premioNobel": "No",
+      "premioNobel": "1",
       "createdAt": "2025-11-06T12:50:07.914Z"
     }
   ],
@@ -27,21 +27,21 @@
       "id": "1",
       "titulo": "José Profe",
       "editorial": "Matemáticas",
-      "fecha": "Casado",
+      "fecha": "2005-01-01",
       "createdAt": "2024-10-23T10:56:35.101Z"
     },
     {
       "id": "2",
-      "titulo": "José Profe",
-      "editorial": "Matemáticas",
-      "fecha": "Casado",
+      "titulo": "Futbol",
+      "editorial": "Marca",
+      "fecha": "2008-01-01",
       "createdAt": "2024-10-23T10:56:35.101Z"
     },
     {
       "id": "3",
-      "titulo": "José Profe",
-      "editorial": "Matemáticas",
-      "fecha": "Casado",
+      "titulo": "El quijote",
+      "editorial": "Anaya",
+      "fecha": "2012-01-01",
       "createdAt": "2024-10-23T10:56:35.101Z"
     }
   ]

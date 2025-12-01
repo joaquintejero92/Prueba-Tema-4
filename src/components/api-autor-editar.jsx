@@ -34,11 +34,11 @@ function AutorEditarAPI({ autor }) {
                     <select
                         id="premioNobel"
                         name="premioNobel"
-                        defaultValue={autor.premioNobel ? "true" : "false"}
+                        defaultValue={autor.premioNobel ? "1" : "false"}
                         className="p-1 border border-slate-200"
                     >
-                        <option value="true">Sí</option>
-                        <option value="false">No</option>
+                        <option value="1">Sí</option>
+                        <option value="0">No</option>
                     </select>
 
                     <div className='col-span-2 grid gap-2'>
