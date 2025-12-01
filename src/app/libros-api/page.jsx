@@ -2,34 +2,30 @@ import { Suspense } from "react";
 import Link from "next/link";
 
 import Fallback from "@/components/fallback";
-import Profesores from "@/components/db-profesores";
-import ProfesorNuevo from "@/components/db-profesor-nuevo";
+import Libros from "@/components/api-libros";
+import LibroNuevoAPI from "@/components/api-libro-nuevo";
 
 
-
-async function PaginaProfesores({ searchParams }) {
+async function PaginaLibros({ searchParams }) {
     let { query } = await searchParams
     query ??= ''
-
-    console.log(query)
 
     return (
         <section className="min-h-screen max-w-5xl mx-auto px-10 py-10">
             <Link href="/" className="fixed text-4xl p-2 bg-orange-300 rounded-full">🏠</Link>
 
             <h1 className='py-10 text-3xl text-blue-500 text-center border-b-4 border-b-blue-500'>
-                BASE DE DATOS
+                API REST
             </h1>
 
-
-            <ProfesorNuevo />
+            <LibroNuevoAPI />
 
 
             <Suspense fallback={<Fallback>Obteniendo datos ... </Fallback>}>
-                <Profesores query={query} />
+                <Libros query={query} />
             </Suspense>
         </section>
     );
 }
 
-export default PaginaProfesores;
+export default PaginaLibros;
